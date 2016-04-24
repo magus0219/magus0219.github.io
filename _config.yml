@@ -1,3 +1,4 @@
 timezone: Asia/Shanghai
 
 name: Arthur.Qin
+permalink: /blog/:year/:month/:day/:title
