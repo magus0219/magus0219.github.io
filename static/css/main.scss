@@ -1,0 +1,60 @@
+---
+---
+* {
+       vertical-align: baseline;
+       font-weight: inherit;
+       font-family: inherit;
+       font-style: inherit;
+       font-size: 100%;
+       outline: 0;
+       padding: 0;
+       margin: 0;
+       border: 0;
+}
+
+@font-face {
+  font-family: 'Ostrich Sans';
+  src: url('/static/font/ostrich-sans-light.eot');
+  src: local('☺'), url('/static/font/ostrich-sans-light.woff') format('woff'), url('/static/font/ostrich-sans-light.ttf') format('truetype'), url('/static/font/ostrich-sans-light.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(245,245,245);
+
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 16px;
+
+  .content {
+    padding-left: 5%;
+    padding-right: 5%;
+
+    height: 600px;
+
+    display: flex;
+    flex-direction: column; // 主轴方向
+    justify-content: center;
+
+    nav {
+      list-style-type: none;
+
+      display: flex;
+      flex-direction: row; // 主轴方向
+      flex-wrap: nowrap; // 一行不够如何元素换行
+      justify-content: center;
+      align-items: center;
+
+      a {
+        font-family: Ostrich Sans;
+        font-size: 3em;
+        color: rgb(0,0,0);
+        text-decoration:none;
+
+        &:hover {
+          background-color: rgb(226,226,226);
+        }
+      }
+    }
+  }
+}
