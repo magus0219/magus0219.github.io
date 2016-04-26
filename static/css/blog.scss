@@ -1,0 +1,72 @@
+---
+---
+@import "main";
+
+.content {
+    /* 水平拆分 */
+    display: flex;
+    flex-direction: row; // 主轴方向
+    justify-content: flex-start; // 主轴如何聚合
+
+    aside {
+      width: 10%;
+
+      nav {
+        display: flex;
+        flex-direction: column; // 主轴方向
+        flex-wrap: nowrap; // 一行不够如何元素换行
+        justify-content: flex-start; // 主轴如何聚合
+        align-items: flex-end; // 副轴如何聚合
+
+        a {
+          font-family: Ostrich Sans;
+          font-size: 2em;
+          color: rgb(0,0,0);
+          text-decoration: none;
+
+          &:hover {
+            background-color: rgb(226,226,226);
+          }
+        }
+      }
+    }
+
+    section {
+      width: 85%;
+
+      margin-top: 30px;
+      margin-left: 50px;
+
+      article {
+        display: flex;
+        flex-direction: row; // 主轴方向
+        justify-content: flex-start; // 主轴如何聚合
+
+        .text {
+          width: 75%;
+
+          h1 {
+            a {
+              font-family: Times New Roman;
+              font-size: 3em;
+              color: rgb(0,0,0);
+              text-decoration: none;
+
+              &:hover {
+                background-color: rgb(226,226,226);
+                transition: all .25s linear;
+              }
+            }
+          }
+
+          p {
+            font-size: 1.1em;
+            padding-bottom: 15px;
+          }
+        }
+
+        border-bottom: 2px solid rgb(226,226,226);
+      }
+    }
+}
+

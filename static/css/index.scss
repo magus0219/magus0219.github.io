@@ -1,0 +1,30 @@
+---
+---
+@import "main";
+
+.content {
+    /* 垂直居中 */
+    display: flex;
+    flex-direction: column; // 主轴方向
+    justify-content: center; // 主轴如何聚合
+
+    nav {
+      display: flex;
+      flex-direction: row; // 主轴方向
+      flex-wrap: nowrap; // 一行不够如何元素换行
+      justify-content: center; // 主轴如何聚合
+      align-items: center; // 副轴如何聚合
+
+      a {
+        font-family: Ostrich Sans;
+        font-size: 3em;
+        color: rgb(0,0,0);
+        text-decoration:none;
+
+        &:hover {
+          background-color: rgb(226,226,226);
+        }
+      }
+    }
+}
+

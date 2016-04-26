@@ -1,11 +1,35 @@
 ---
-layout: default
-title: 秦园浅草
 ---
-  <h1>{{ page.title }}</h1>
-  <ul class="posts">
-
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>秦园浅草</title>
+      <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+      <!-- link to main stylesheet -->
+      <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
+    </head>
+    <body>
+      <div class="content">
+        <aside class="nav">
+          <nav>
+              <img src="/static/img/qin.png"/>
+              <a href="/about">About</a>
+              <a href="/blog">Blog</a>
+          </nav>
+        </aside>
+        <section>
+          {% for post in site.posts %}
+            <article>
+              <div class="text">
+                <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+                <p>{{ post.excerpt }}</p>
+              </div>
+              <div class="ext">
+                <span>{{ post.date | date_to_string }}</span>
+              </div>
+            </article>
+          {% endfor %}
+        </section>
+      </div>
+    </body>
+  </html>
