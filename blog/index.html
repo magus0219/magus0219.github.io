@@ -20,11 +20,13 @@
         <section>
           {% for post in site.posts %}
             <article>
-              <div class="text">
-                <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
-                {{ post.excerpt }}
+              <div class="article">
+                <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} >></a></h1>
+                <div class="excerpt">{{ post.excerpt }}</div>
+                <div class="text">{{ post.content | remove: post.excerpt }}</div>
               </div>
               <div class="ext">
+                <i class="iconfont">&#xe74e;</i>
                 <span>{{ post.date | date_to_string }}</span>
               </div>
             </article>

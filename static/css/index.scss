@@ -18,11 +18,9 @@
       a {
         font-family: Ostrich Sans;
         font-size: 3em;
-        color: rgb(0,0,0);
-        text-decoration:none;
 
         &:hover {
-          background-color: rgb(226,226,226);
+          background-color: $hover-gray;
         }
       }
     }

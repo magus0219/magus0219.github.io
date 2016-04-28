@@ -3,6 +3,7 @@ layout: post
 title: "At the beginning..."
 date: 2016-04-24
 ---
+Launch for what?
 
 When 2016 comes, what i want is a knowledge base of my own.  
 

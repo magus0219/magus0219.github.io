@@ -6,8 +6,9 @@
     /* 水平拆分 */
     display: flex;
     flex-direction: row; // 主轴方向
-    justify-content: flex-start; // 主轴如何聚合
+    justify-content: space-between; // 主轴如何聚合
 
+    /* 边栏 */
     aside {
       width: 10%;
 
@@ -21,53 +22,70 @@
         a {
           font-family: Ostrich Sans;
           font-size: 2em;
-          color: rgb(0,0,0);
-          text-decoration: none;
 
           &:hover {
-            background-color: rgb(226,226,226);
+            background-color: $hover-gray;
           }
         }
       }
     }
 
+    /* 主要内容 */
     section {
       width: 85%;
 
-      margin-top: 30px;
-      margin-left: 50px;
+      margin-top: 5%;
 
+      /* 文章 */
       article {
         display: flex;
         flex-direction: row; // 主轴方向
-        justify-content: flex-start; // 主轴如何聚合
+        justify-content: space-between; // 主轴如何聚合
 
-        .text {
-          width: 75%;
+        /* 具体文章 */
+        .article {
+          width: 70%;
 
           h1 {
             a {
               font-family: Fertigo Pro;
               font-size: 3em;
-              color: rgb(0,0,0);
-              text-decoration: none;
 
               &:hover {
-                background-color: rgb(226,226,226);
+                background-color: $hover-gray;
                 transition: all .25s linear;
               }
             }
           }
 
-          p {
-            font-family: Times New Roman;
+          .excerpt p{
+            font-family: Futura Extended;
             font-size: 1.1em;
             padding-top: 15px;
-            padding-bottom: 15px;
+            padding-bottom: 25px;
+          }
+
+          .text {
+            p {
+              font-family: Times New Roman;
+              font-size: 1.1em;
+              padding-bottom: 10px;
+            }
+            padding-bottom: 20px;
           }
         }
 
-        border-bottom: 2px solid rgb(226,226,226);
+        /* 具体文章扩展信息 */
+        .ext {
+          color: $ext-light-gray;
+          marging-left: 10px;
+
+          span {
+            padding-left: 10px;
+          }
+        }
+
+        border-bottom: 2px solid $hover-gray;
       }
     }
 }
