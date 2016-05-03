@@ -28,6 +28,12 @@
             background-color: $hover-gray;
           }
         }
+
+        a.logo {
+          &:hover {
+            background-color: transparent;
+        }
+      }
       }
     }
 
