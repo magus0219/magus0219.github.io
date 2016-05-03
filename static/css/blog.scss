@@ -34,13 +34,12 @@
     section {
       width: 85%;
 
-      margin-top: 5%;
-
       /* 文章 */
       article {
         display: flex;
         flex-direction: row; // 主轴方向
         justify-content: space-between; // 主轴如何聚合
+        margin-top: 5%;
 
         /* 具体文章 */
         .article {

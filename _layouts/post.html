@@ -1,9 +1,14 @@
 ---
 layout: default
+title: 秦园浅草 | Blog
 ---
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-<div class="post">
-  {{ content }}
-</div>
+<article>
+  <div class="article">
+    <h1>{{ page.title }}</h1>
+    <div class="text">{{ page.content }}</div>
+  </div>
+  <div class="ext">
+    <i class="iconfont">&#xe74e;</i>
+    <span>{{ page.date | date_to_string }}</span>
+  </div>
+</article>

@@ -1,37 +1,18 @@
 ---
+layout: default
+title: 秦园浅草 | Blog
 ---
-<!DOCTYPE html>
-  <html>
-    <head>
-      <title>秦园浅草</title>
-      <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
-      <!-- link to main stylesheet -->
-      <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
-    </head>
-    <body>
-      <div class="content">
-        <aside class="nav">
-          <nav>
-              <img src="/static/img/qin.png"/>
-              <a href="/about">About</a>
-              <a href="/blog">Blog</a>
-          </nav>
-        </aside>
-        <section>
-          {% for post in site.posts %}
-            <article>
-              <div class="article">
-                <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} >></a></h1>
-                <div class="excerpt">{{ post.excerpt }}</div>
-                <div class="text">{{ post.content | remove: post.excerpt }}</div>
-              </div>
-              <div class="ext">
-                <i class="iconfont">&#xe74e;</i>
-                <span>{{ post.date | date_to_string }}</span>
-              </div>
-            </article>
-          {% endfor %}
-        </section>
-      </div>
-    </body>
-  </html>
+{% for post in site.posts %}
+  <article>
+    <div class="article">
+      <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} >></a></h1>
+      <div class="excerpt">{{ post.excerpt }}</div>
+      <div class="text">{{ post.content | remove: post.excerpt }}</div>
+    </div>
+    <div class="ext">
+      <i class="iconfont">&#xe74e;</i>
+      <span>{{ post.date | date_to_string }}</span>
+    </div>
+  </article>
+{% endfor %}
+
