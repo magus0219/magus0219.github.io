@@ -18,9 +18,17 @@
       a {
         font-family: Ostrich Sans;
         font-size: 3em;
+        padding-left: 10px;
+        padding-right: 10px;
 
         &:hover {
           background-color: $hover-gray;
+        }
+      }
+
+      a .logo {
+        &:hover {
+          background-color: none;
         }
       }
     }
