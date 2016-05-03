@@ -46,10 +46,10 @@
           width: 70%;
 
           h1 {
+            font-family: Fertigo Pro;
+            font-size: 3em;
+            padding-bottom: 15px;
             a {
-              font-family: Fertigo Pro;
-              font-size: 3em;
-
               &:hover {
                 background-color: $hover-gray;
                 transition: all .25s linear;
@@ -60,7 +60,6 @@
           .excerpt p{
             font-family: Futura Extended;
             font-size: 1.1em;
-            padding-top: 15px;
             padding-bottom: 25px;
           }
 
