@@ -1,8 +1,9 @@
 ---
-layout: default
-title: 秦园浅草 | Blog
+layout: post
+title: Grass of Qin's Memory | Blog
+css_file: blog
 ---
-{% for post in site.posts %}
+{% for post in site.posts_by_language['en'] %}
   <article>
     <div class="article">
       <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }} >></a></h1>

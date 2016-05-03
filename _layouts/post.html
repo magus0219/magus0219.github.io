@@ -2,13 +2,21 @@
 layout: default
 title: {{ page.title }}
 ---
-<article>
-  <div class="article">
-    <h1>{{ page.title }}</h1>
-    <div class="text">{{ page.content }}</div>
-  </div>
-  <div class="ext">
-    <i class="iconfont">&#xe74e;</i>
-    <span>{{ page.date | date_to_string }}</span>
-  </div>
-</article>
+<div class="content">
+  <aside class="nav">
+    <nav>
+        {% if page.language == 'cn' %}
+          <img src="/static/img/qin.png"/>
+          <a href="/cn/about">关于</a>
+          <a href="/cn/blog">博客</a>
+        {% else %}
+          <img src="/static/img/qin.png"/>
+          <a href="/about">About</a>
+          <a href="/blog">Blog</a>
+        {% endif %}
+    </nav>
+  </aside>
+  <section>
+    {{ content }}
+  </section>
+</div>

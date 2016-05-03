@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="content">
+  <nav>
+      {% if page.language == 'cn' %}
+        <a href="/cn/about">关于</a>
+        <img src="/static/img/qin.png"/>
+        <a href="/cn/blog">博客</a>
+      {% else %}
+        <a href="/about">About</a>
+        <img src="/static/img/qin.png"/>
+        <a href="/blog">Blog</a>
+      {% endif %}
+  </nav>
+</div>
+

@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: post-content
 title: "At the beginning..."
-date: 2016-04-24
+date: 2016-02-19
+css_file: blog
 ---
 Launch for what?
 
