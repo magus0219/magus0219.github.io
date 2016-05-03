@@ -1,8 +1,8 @@
 ---
-font-nav: Ostrich Sans
-font-header: Fertigo Pro
-font-excerpt: Futura Extended
-font-text: Times New Roman
+font-nav: Hiragino Sans GB
+font-header: Hiragino Sans GB
+font-excerpt: Hiragino Sans GB
+font-text: Hiragino Sans GB
 ---
 @import "main";
 
@@ -25,8 +25,8 @@ font-text: Times New Roman
 
         a {
           font-family: {{ page.font-nav }};
-          font-size: 2em;
-          padding-top: 10px;
+          font-size: 1.2em;
+          // padding-top: 10px;
 
           &:hover {
             background-color: $hover-gray;

@@ -1,5 +1,5 @@
 ---
-font-nav: Ostrich Sans
+font-nav: Hiragino Sans GB
 ---
 @import "main";
 
@@ -18,7 +18,7 @@ font-nav: Ostrich Sans
 
       a {
         font-family: {{ page.font-nav }};
-        font-size: 3em;
+        font-size: 2em;
         padding-left: 10px;
         padding-right: 10px;
 
