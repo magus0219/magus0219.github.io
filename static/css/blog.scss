@@ -7,94 +7,193 @@ font-text: Times New Roman
 @import "main";
 
 .content {
-    /* 水平拆分 */
-    display: flex;
-    flex-direction: row; // 主轴方向
-    justify-content: space-between; // 主轴如何聚合
+    @media screen and (min-width: 480px) {
+      /* 水平拆分 */
+      display: flex;
+      flex-direction: row; // 主轴方向
+      justify-content: space-between; // 主轴如何聚合
 
-    /* 边栏 */
-    aside {
-      width: 10%;
+      /* 边栏 */
+      aside {
+        width: 10%;
 
-      nav {
-        display: flex;
-        flex-direction: column; // 主轴方向
-        flex-wrap: nowrap; // 一行不够如何元素换行
-        justify-content: flex-start; // 主轴如何聚合
-        align-items: flex-end; // 副轴如何聚合
+        nav {
+          display: flex;
+          flex-direction: column; // 主轴方向
+          flex-wrap: nowrap; // 一行不够如何元素换行
+          justify-content: flex-start; // 主轴如何聚合
+          align-items: flex-end; // 副轴如何聚合
 
-        a {
-          font-family: {{ page.font-nav }};
-          font-size: 2em;
-          padding-top: 10px;
+          a {
+            font-family: {{ page.font-nav }};
+            font-size: 2em;
+            padding-top: 10px;
 
-          &:hover {
-            background-color: $hover-gray;
+            &:hover {
+              background-color: $hover-gray;
+            }
+          }
+
+          a.logo {
+            &:hover {
+              background-color: transparent;
+            }
           }
         }
-
-        a.logo {
-          &:hover {
-            background-color: transparent;
-        }
       }
+
+      /* 主要内容 */
+      section {
+        width: 85%;
+
+        /* 文章 */
+        article {
+          display: flex;
+          flex-direction: row; // 主轴方向
+          justify-content: space-between; // 主轴如何聚合
+          margin-top: 5%;
+
+          /* 具体文章 */
+          .article {
+            width: 70%;
+
+            h1 {
+              font-family: {{ page.font-header }};
+              font-size: 3em;
+              padding-bottom: 15px;
+              a {
+                &:hover {
+                  background-color: $hover-gray;
+                  transition: all .25s linear;
+                }
+              }
+            }
+
+            .excerpt p{
+              font-family: {{ page.font-excerpt }};
+              font-size: 1.1em;
+              padding-bottom: 25px;
+            }
+
+            .text {
+              p {
+                font-family: {{ page.font-text }};
+                font-size: 1.1em;
+                padding-bottom: 10px;
+              }
+              padding-bottom: 20px;
+            }
+          }
+
+          /* 具体文章扩展信息 */
+          .ext {
+            color: $ext-light-gray;
+            marging-left: 10px;
+
+            span {
+              padding-left: 10px;
+            }
+          }
+
+          border-bottom: 2px solid $hover-gray;
+        }
       }
     }
 
-    /* 主要内容 */
-    section {
-      width: 85%;
+    @media screen and (max-width: 480px) {
+      /* 垂直拆分 */
+      display: flex;
+      flex-direction: column; // 主轴方向
+      justify-content: flex-start; // 主轴如何聚合
 
-      /* 文章 */
-      article {
-        display: flex;
-        flex-direction: row; // 主轴方向
-        justify-content: space-between; // 主轴如何聚合
-        margin-top: 5%;
+      /* 边栏 */
+      aside {
+        height: 10%;
 
-        /* 具体文章 */
-        .article {
-          width: 70%;
+        nav {
+          display: flex;
+          flex-direction: row; // 主轴方向
+          flex-wrap: nowrap; // 一行不够如何元素换行
+          justify-content: space-between; // 主轴如何聚合
+          align-items: center; // 副轴如何聚合
 
-          h1 {
-            font-family: {{ page.font-header }};
-            font-size: 3em;
-            padding-bottom: 15px;
-            a {
-              &:hover {
-                background-color: $hover-gray;
-                transition: all .25s linear;
+          a {
+            font-family: {{ page.font-nav }};
+            font-size: 2em;
+            padding-top: 10px;
+
+            &:hover {
+              background-color: $hover-gray;
+            }
+          }
+
+          a.logo {
+            &:hover {
+              background-color: transparent;
+            }
+          }
+
+          a.logo img {
+            width: 2em;
+            height: 2.78em;
+          }
+        }
+      }
+
+      /* 主要内容 */
+      section {
+
+        /* 文章 */
+        article {
+          display: flex;
+          flex-direction: column; // 主轴方向
+          justify-content: space-between; // 主轴如何聚合
+          margin-top: 3em;
+
+          /* 具体文章 */
+          .article {
+            order: 2;
+
+            h1 {
+              font-family: {{ page.font-header }};
+              font-size: 3em;
+              padding-bottom: 15px;
+              a {
+                &:hover {
+                  background-color: $hover-gray;
+                  transition: all .25s linear;
+                }
               }
             }
-          }
 
-          .excerpt p{
-            font-family: {{ page.font-excerpt }};
-            font-size: 1.1em;
-            padding-bottom: 25px;
-          }
-
-          .text {
-            p {
-              font-family: {{ page.font-text }};
+            .excerpt p{
+              font-family: {{ page.font-excerpt }};
               font-size: 1.1em;
-              padding-bottom: 10px;
+              padding-bottom: 25px;
             }
-            padding-bottom: 20px;
+
+            .text {
+              p {
+                font-family: {{ page.font-text }};
+                font-size: 1.1em;
+                padding-bottom: 10px;
+              }
+              padding-bottom: 20px;
+            }
           }
-        }
 
-        /* 具体文章扩展信息 */
-        .ext {
-          color: $ext-light-gray;
-          marging-left: 10px;
+          /* 具体文章扩展信息 */
+          .ext {
+            color: $ext-light-gray;
+            order: 1;  // 展示靠前
 
-          span {
-            padding-left: 10px;
+            span {
+              padding-left: 0.2em;
+            }
           }
-        }
 
-        border-bottom: 2px solid $hover-gray;
+          border-bottom: 2px solid $hover-gray;
+        }
       }
     }
 }
