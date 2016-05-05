@@ -60,11 +60,19 @@ body {
   flex-direction: column;
   justify-content: center; }
   .content nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center; }
+    display: flex; }
+    @media screen and (min-width: 480px) {
+      .content nav {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center; } }
+    @media screen and (max-width: 480px) {
+      .content nav {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center; } }
     .content nav a {
       font-family: Hiragino Sans GB;
       font-size: 2em;

@@ -54,60 +54,123 @@ body {
     padding-right: 10%;
     height: 600px; }
 
-.content {
-  /* 水平拆分 */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  /* 边栏 */
-  /* 主要内容 */ }
-  .content aside {
-    width: 10%; }
-    .content aside nav {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      align-items: flex-end; }
-      .content aside nav a {
-        font-family: Hiragino Sans GB;
-        font-size: 1.2em; }
-        .content aside nav a:hover {
-          background-color: #e2e2e2; }
-      .content aside nav a.logo:hover {
-        background-color: transparent; }
-  .content section {
-    width: 85%;
-    /* 文章 */ }
-    .content section article {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin-top: 5%;
-      /* 具体文章 */
-      /* 具体文章扩展信息 */
-      border-bottom: 2px solid #e2e2e2; }
-      .content section article .article {
-        width: 70%; }
-        .content section article .article h1 {
+@media screen and (min-width: 480px) {
+  .content {
+    /* 水平拆分 */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* 边栏 */
+    /* 主要内容 */ }
+    .content aside {
+      width: 10%; }
+      .content aside nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-end; }
+        .content aside nav a {
           font-family: Hiragino Sans GB;
-          font-size: 3em;
-          padding-bottom: 15px; }
-          .content section article .article h1 a:hover {
-            background-color: #e2e2e2;
-            transition: all .25s linear; }
-        .content section article .article .excerpt p {
-          font-family: Hiragino Sans GB;
-          font-size: 1.1em;
-          padding-bottom: 25px; }
-        .content section article .article .text {
-          padding-bottom: 20px; }
-          .content section article .article .text p {
+          font-size: 2em;
+          padding-top: 10px; }
+          .content aside nav a:hover {
+            background-color: #e2e2e2; }
+        .content aside nav a.logo:hover {
+          background-color: transparent; }
+    .content section {
+      width: 85%;
+      /* 文章 */ }
+      .content section article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 5%;
+        /* 具体文章 */
+        /* 具体文章扩展信息 */
+        border-bottom: 2px solid #e2e2e2; }
+        .content section article .article {
+          width: 70%; }
+          .content section article .article h1 {
+            font-family: Hiragino Sans GB;
+            font-size: 3em;
+            padding-bottom: 15px; }
+            .content section article .article h1 a:hover {
+              background-color: #e2e2e2;
+              transition: all .25s linear; }
+          .content section article .article .excerpt p {
             font-family: Hiragino Sans GB;
             font-size: 1.1em;
-            padding-bottom: 10px; }
-      .content section article .ext {
-        color: #969696;
-        marging-left: 10px; }
-        .content section article .ext span {
-          padding-left: 10px; }
+            padding-bottom: 25px; }
+          .content section article .article .text {
+            padding-bottom: 20px; }
+            .content section article .article .text p {
+              font-family: Hiragino Sans GB;
+              font-size: 1.1em;
+              padding-bottom: 10px; }
+        .content section article .ext {
+          color: #969696;
+          marging-left: 10px; }
+          .content section article .ext span {
+            padding-left: 10px; } }
+@media screen and (max-width: 480px) {
+  .content {
+    /* 垂直拆分 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* 边栏 */
+    /* 主要内容 */ }
+    .content aside {
+      height: 10%; }
+      .content aside nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center; }
+        .content aside nav a {
+          font-family: Hiragino Sans GB;
+          font-size: 1.2em;
+          padding-top: 10px; }
+          .content aside nav a:hover {
+            background-color: #e2e2e2; }
+        .content aside nav a.logo:hover {
+          background-color: transparent; }
+        .content aside nav a.logo img {
+          width: 2em;
+          height: 2.78em; }
+    .content section {
+      /* 文章 */ }
+      .content section article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 2em;
+        /* 具体文章 */
+        /* 具体文章扩展信息 */
+        border-bottom: 2px solid #e2e2e2; }
+        .content section article .article {
+          order: 2; }
+          .content section article .article h1 {
+            font-family: Hiragino Sans GB;
+            font-size: 1.6em;
+            padding-bottom: 0.2em; }
+            .content section article .article h1 a:hover {
+              background-color: #e2e2e2;
+              transition: all .25s linear; }
+          .content section article .article .excerpt p {
+            font-family: Hiragino Sans GB;
+            font-size: 1.1em;
+            padding-bottom: 0.5em; }
+          .content section article .article .text {
+            padding-bottom: 20px; }
+            .content section article .article .text p {
+              font-family: Hiragino Sans GB;
+              font-size: 1em;
+              padding-bottom: 10px; }
+        .content section article .ext {
+          color: #969696;
+          order: 1; }
+          .content section article .ext span {
+            padding-left: 0.2em; } }
