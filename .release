@@ -1,0 +1,4 @@
+ls | grep -v _site|xargs rm -rf
+cp -r _site/* .
+rm -rf _site/
+touch .nojekyll
